@@ -34,3 +34,5 @@ meteorhacks:npm
 
 npm-container
 cfs:filesystem
+insecure
+autopublish
