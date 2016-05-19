@@ -25,6 +25,7 @@ cfs:collection@0.5.5
 cfs:collection-filters@0.2.4
 cfs:data-man@0.0.6
 cfs:file@0.1.17
+cfs:filesystem@0.1.2
 cfs:gridfs@0.0.33
 cfs:http-methods@0.0.32
 cfs:http-publish@0.0.13
@@ -78,6 +79,8 @@ matb33:bootstrap-jumbotron@10.0.0
 mdg:validation-error@0.2.0
 meteor@1.1.14
 meteor-base@1.0.4
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 minifier-css@1.1.11
 minifier-js@1.1.11
 minimongo@1.0.16
@@ -90,6 +93,7 @@ mongo@1.1.7
 mongo-id@1.0.4
 mongo-livedata@1.0.12
 npm-bcrypt@0.8.5
+npm-container@1.2.0
 npm-mongo@1.4.43
 observe-sequence@1.0.11
 ordered-dict@1.0.7
