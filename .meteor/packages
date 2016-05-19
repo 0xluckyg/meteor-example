@@ -32,3 +32,8 @@ manuelschoebel:ms-seo
 meteorhacks:npm
 npm-container
 cfs:filesystem
+<<<<<<< HEAD
+=======
+insecure
+autopublish
+>>>>>>> 537dd874e7148252d0614cfb72edfeb675645d9e

@@ -141,8 +141,8 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		}
 	});
 
-	Meteor.publish('allPImgs', function () {
-		return PostImages__.find();
-	});
+	// Meteor.publish('allPImgs', function () {
+	// 	return PostImages__.find();
+	// });
 
 }); };

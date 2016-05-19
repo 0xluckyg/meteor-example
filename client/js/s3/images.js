@@ -45,5 +45,5 @@ if (Meteor.isClient) {
 		}
 	});
 
-	Meteor.subscribe('allPImgs');
+	// Meteor.subscribe('allPImgs');
 };
