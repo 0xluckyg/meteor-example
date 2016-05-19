@@ -29,3 +29,8 @@ cfs:s3
 cfs:standard-packages
 iron:router
 manuelschoebel:ms-seo
+meteorhacks:npm
+
+
+npm-container
+cfs:filesystem

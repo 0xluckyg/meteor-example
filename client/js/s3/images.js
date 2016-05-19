@@ -45,4 +45,5 @@ if (Meteor.isClient) {
 		}
 	});
 
+	Meteor.subscribe('allPImgs');
 };

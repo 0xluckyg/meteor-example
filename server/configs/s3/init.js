@@ -24,9 +24,11 @@ if(Meteor.isServer){ Meteor.startup(function () {
 	ProfImages.allow({
 		insert: function (userId, fileObj) {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+		},
+		download: function() {
+			return true;
 		}
 	});
-
 	
 
 	
@@ -43,7 +45,44 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		accessKeyId: "AKIAJGKL7Z6WGVQUIYEQ",
 		secretAccessKey: "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",
 		bucket: "joqur",
-		folder: "postimagessm"
+		folder: "postimagessm",
+		transformWrite: function(fileObj, readStream, writeStream) {
+			streamToBuffer(readStream, function(err, buffer){
+				if (err) {
+					throw new Meteor.Error('Issue processing file buffer.');
+				}
+				else if(buffer) {
+					lwip.open(buffer, function(err, img) {
+						if (err) {throw new Meteor.Error('Trouble opening image for resizing.')};
+						
+
+						var newW, newH;
+						if (image.width() > image.height()) {
+							newW = 600;
+							newH = image.height()*600/image.width();
+						}
+						else{
+							newH = 600;
+							newW = image.width()*600/image.height(); 
+						};
+
+
+						image.batch()
+							.resize(newW, newH)
+							.toBuffer('jpg', {quality: 72}, function(err, buffer){
+							
+								if (err) {throw new Meteor.Error(err)};
+								var newStream = streamifier.createReadStream(buffer);
+								newStream.pipe(writeStream);
+
+							});
+					});
+				}
+				else{
+					readStream.pipe(writeStream);
+				};
+			});
+		}
 	});
 
 	PostImages = new FS.Collection("postimages", {
@@ -75,16 +114,29 @@ if(Meteor.isServer){ Meteor.startup(function () {
 	PostImages.allow({
 		insert: function (userId, fileObj) {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+		},
+		download: function() {
+			return true;
 		}
 	});
 
 	PostImages__.allow({
 		insert: function (userId, fileObj) {
-			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+			return true//fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+		},
+		update: function(userId,project,fields,modifier) {
+			return true;
+		},
+		remove: function() {
+			return true;
+		},
+		download: function() {
+			return true;
 		}
 	});
 
+	Meteor.publish('allPImgs', function () {
+		return PostImages__.find();
+	});
 
-	
-
-});  };
+}); };
