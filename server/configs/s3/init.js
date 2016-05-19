@@ -25,6 +25,9 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		insert: function (userId, fileObj) {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
+		update: function(userId,project,fields,modifier) {
+			return true;
+		},
 		download: function() {
 			return true;
 		}
@@ -114,6 +117,9 @@ if(Meteor.isServer){ Meteor.startup(function () {
 	PostImages.allow({
 		insert: function (userId, fileObj) {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+		},
+		update: function(userId,project,fields,modifier) {
+			return true;
 		},
 		download: function() {
 			return true;
