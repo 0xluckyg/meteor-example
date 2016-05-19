@@ -29,12 +29,6 @@ cfs:s3
 cfs:standard-packages
 iron:router
 manuelschoebel:ms-seo
-<<<<<<< HEAD
-matb33:bootstrap-jumbotron
-=======
 meteorhacks:npm
-
-
 npm-container
 cfs:filesystem
->>>>>>> c553f7006098b54e25349527250e92d08736952e

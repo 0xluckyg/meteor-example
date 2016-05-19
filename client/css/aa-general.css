@@ -1,0 +1,14 @@
+/*body {
+    background: url("https://images.unsplash.com/photo-1416397202228-6b2eb5b3bb26?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=36e8620aab1ddd8050e4629d2afb24de");
+    background-size: cover;
+    background-position: center;
+}*/
+
+
+html, body {
+    margin: 0px;
+    height: 100%;
+    font-family: Raleway;
+    font-weight: 500;
+}
+

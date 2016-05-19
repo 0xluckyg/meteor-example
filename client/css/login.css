@@ -1,0 +1,92 @@
+
+.shade {
+    height: 100%;
+    background: rgba(0,0,0,.0);
+    overflow: auto;
+}
+
+.loginForm {
+    display: block;
+    background: transparent;
+    border: 2px solid rgba(270,270,270,0.7);
+    border-radius: 21px;
+    width: 300px;
+    height: 42px;
+    margin: 6px auto;
+    padding-left: 18px; padding-right: 18px;
+    box-sizing: border-box;
+    color: #F7F7Fa;
+    font-size: 12px;
+    outline: none;
+}
+
+.loginForm:hover, .loginForm:focus {
+    background: rgba(0,0,0,.3);
+    transition: background .3s;
+    -webkit-transition: background .3s
+    outline: none;
+    border: 2px solid rgba(270,270,270,1);
+
+    transition: all .3s;
+}
+
+.loginDiv {
+    margin: 15% auto;
+    margin-top: calc(50vh - 210px);
+    margin-bottom: calc(48px);
+    width: 330px;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    box-shadow: 0px 3px 12px -3px black;
+    border-radius: 15px;
+    height: 270px;
+}
+@media screen and ( max-height: 420px ){
+    .loginDiv{
+        margin-top: 48px;
+    }
+}  
+
+#loginTag {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 9px;
+}
+
+#loginTag{
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.buttonForm {
+    border: none;
+    background: rgba(58, 28, 115, 1);
+    margin-top: 25px;
+    font-size: 15px;
+    width: 143px;
+    margin-left: 15px;
+    float: left;
+    display: block;
+    border-radius: 21px;
+    height: 42px;
+    padding-left: 18px; padding-right: 18px;
+    box-sizing: border-box;
+    color: #F7F7Fa;
+    font-size: 12px;
+    outline: none;
+
+}
+
+.buttonForm:hover {
+    border: none;
+    background: rgba(58, 28, 115, .6);
+    margin-top: 25px;
+    transition: 0.3s;
+
+}
+
+
+
