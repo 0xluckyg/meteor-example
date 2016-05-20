@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+	console.log("%cHello, Scott", "color:blue;font-size:48px;")
 	var profImagesStore = new FS.Store.S3("profimages");
 
 	ProfImages = new FS.Collection("profimages", {
@@ -7,7 +8,7 @@ if (Meteor.isClient) {
 			allow: {
 				contentTypes: ['image/*']
 			},
-			maxSize: 600000,
+			maxSize: 5242880,
 			onInvalid: function(m) {
 				if (Meteor.isClient) alert(m);
 			}
@@ -25,7 +26,7 @@ if (Meteor.isClient) {
 			allow: {
 				contentTypes: ['image/*']
 			},
-			maxSize: 3145728,
+			maxSize: 5242880,
 			onInvalid: function(m) {
 				if (Meteor.isClient) alert(m);
 			}
@@ -38,7 +39,7 @@ if (Meteor.isClient) {
 			allow: {
 				contentTypes: ['image/*']
 			},
-			maxSize: 600000,
+			maxSize: 5242880,
 			onInvalid: function(m) {
 				if (Meteor.isClient) alert(m);
 			}

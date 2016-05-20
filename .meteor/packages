@@ -32,5 +32,4 @@ manuelschoebel:ms-seo
 meteorhacks:npm
 npm-container
 cfs:filesystem
-insecure
-autopublish
+cfs:graphicsmagick

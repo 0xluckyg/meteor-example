@@ -1,4 +1,4 @@
-if(Meteor.isServer){ Meteor.startup(function () {
+if(Meteor.isServer) { Meteor.startup(function () {
 	
 	var profImagesStore = new FS.Store.S3("profimages", {
 		region: "us-west-2",
@@ -14,9 +14,9 @@ if(Meteor.isServer){ Meteor.startup(function () {
 			allow: {
 				contentTypes: ['image/*']
 			},
-			maxSize: 600000,
+			maxSize: 5242880,
 			onInvalid: function(m) {
-				if (Meteor.isClient) alert(m);
+				if (Meteor.isClient) alert(m); else console.log(m);
 			}
 		}
 	});
@@ -26,7 +26,7 @@ if(Meteor.isServer){ Meteor.startup(function () {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		update: function(userId,project,fields,modifier) {
-			return true;
+			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		download: function() {
 			return true;
@@ -50,41 +50,72 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		bucket: "joqur",
 		folder: "postimagessm",
 		transformWrite: function(fileObj, readStream, writeStream) {
-			streamToBuffer(readStream, function(err, buffer){
-				if (err) {
-					throw new Meteor.Error('Issue processing file buffer.');
-				}
-				else if(buffer) {
-					lwip.open(buffer, function(err, img) {
-						if (err) {throw new Meteor.Error('Trouble opening image for resizing.')};
-						
 
-						var newW, newH;
-						if (image.width() > image.height()) {
-							newW = 600;
-							newH = image.height()*600/image.width();
-						}
-						else{
-							newH = 600;
-							newW = image.width()*600/image.height(); 
-						};
+			//waste lwip shit
 
 
-						image.batch()
-							.resize(newW, newH)
-							.toBuffer('jpg', {quality: 72}, function(err, buffer){
-							
-								if (err) {throw new Meteor.Error(err)};
-								var newStream = streamifier.createReadStream(buffer);
-								newStream.pipe(writeStream);
 
-							});
-					});
-				}
-				else{
-					readStream.pipe(writeStream);
-				};
-			});
+											// streamToBuffer(readStream, function(err, buffer) {
+											// 	if (err) {
+											// 		throw new Meteor.Error('Issue processing file buffer.');
+											// 	}
+											// 	else if(buffer) {
+											// 		try {
+											// 			lwip.open(buffer, function(err, img) {
+											// 				if (err) {throw new Meteor.Error('Trouble opening image for resizing.')};
+															
+
+											// 				var newW, newH;
+											// 				if (image.width() > image.height()) {
+											// 					newW = 600;
+											// 					newH = image.height()*600/image.width();
+											// 				}
+											// 				else{
+											// 					newH = 600;
+											// 					newW = image.width()*600/image.height(); 
+											// 				};
+
+
+											// 				image.batch()
+											// 					.resize(newW, newH)
+											// 					.toBuffer('jpg', {quality: 72}, function(err, buffer) {
+																
+											// 						if (err) {throw new Meteor.Error(err)};
+											// 						var newStream = streamifier.createReadStream(buffer);
+											// 						newStream.pipe(writeStream);
+
+											// 					});
+											// 			});
+											// 		}
+											// 		catch(exp) {
+											// 			console.log(exp);
+											// 		}
+											// 	}
+											// 	else{
+											// 		readStream.pipe(writeStream);
+											// 	};
+											// });
+				//end waste shit
+			if(fileObj.isImage()) {
+				gm(readStream).size({bufferStream: true}, function(err, value) {
+					if(value) {
+						// if(value.height > 240) {
+						// 	if(value.width > value.height) {
+						// 		this.interlace("Line").resize(240).stream('jpg').pipe(writeStream);
+						// 	}
+						// 	else{
+						// 		this.interlace("Line").resize(null, 240).stream('jpg').pipe(writeStream);
+						// 	};
+						// }
+						// else {
+						// 	if(value.width > 240) {
+						// 		this.interlace("Line").resize(null, 240).stream('jpg').pipe(writeStream);
+						// 	};
+						// };
+						this.interlace("Line").resize(600, 600).stream('jpg').pipe(writeStream);
+					};
+				});
+			};
 		}
 	});
 
@@ -92,11 +123,11 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		stores: [postImagesStore],
 		filter: {
 			allow: {
-				contentTypes: ['images/*']
+				contentTypes: ['image/*']
 			},
-			maxSize: 3145728,
+			maxSize: 5242880,
 			onInvalid: function(m) {
-				if (Meteor.isClient) alert(m);
+				if (Meteor.isClient) alert(m); else console.log(m);
 			}
 		}
 	});
@@ -105,11 +136,11 @@ if(Meteor.isServer){ Meteor.startup(function () {
 		stores: [postImagesSmStore],
 		filter: {
 			allow: {
-				contentTypes: ['images/*']
+				contentTypes: ['image/*']
 			},
-			maxSize: 600000,
+			maxSize: 5242880,
 			onInvalid: function(m) {
-				if (Meteor.isClient) alert(m);
+				if (Meteor.isClient) alert(m); else console.log(m);
 			}
 		}
 	});
@@ -119,7 +150,7 @@ if(Meteor.isServer){ Meteor.startup(function () {
 			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		update: function(userId,project,fields,modifier) {
-			return true;
+			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		download: function() {
 			return true;
@@ -128,21 +159,23 @@ if(Meteor.isServer){ Meteor.startup(function () {
 
 	PostImages__.allow({
 		insert: function (userId, fileObj) {
-			return true//fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
+			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		update: function(userId,project,fields,modifier) {
-			return true;
+			return fileObj.ownerId === userId && Meteor.users.findOne({"_id": userId});
 		},
 		remove: function() {
-			return true;
+			return false;
 		},
 		download: function() {
 			return true;
 		}
 	});
 
-	// Meteor.publish('allPImgs', function () {
-	// 	return PostImages__.find();
-	// });
-
+	Meteor.methods({
+		insertShit: function (a) {
+			var b = new FS.File(a);
+			return PostImages__.insert(b);
+		}
+	});
 }); };
