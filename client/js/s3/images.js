@@ -1,5 +1,4 @@
 if (Meteor.isClient) {
-	console.log("%cHello, Scott", "color:blue;font-size:48px;")
 	var profImagesStore = new FS.Store.S3("profimages");
 
 	ProfImages = new FS.Collection("profimages", {
