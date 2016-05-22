@@ -1,15 +1,20 @@
 <template name="loginTemplate">
-    <div class="shade">
 
+{{> navbar}}
 
-        {{> navbar}}
-
-         <div class="loginDiv">
-            <h2 id="loginTag">Log in!</h2>
-            <input class="loginForm" type=text placeholder="Username"> <br>
-            <input class="loginForm" type=password placeholder="Password">
+<div class="oneSection1login">
+    <div class="loginDiv">
+        <h2 id="loginTag">Log in!</h2>
+        <input class="loginForm" type=text placeholder="Username"> <br>
+        <input class="loginForm" type=password placeholder="Password">
+        <div class="loginButton">
             <input class="buttonForm" type=button value="LOGIN">
             <input class="buttonForm" type=button value="SIGN UP">
         </div>
     </div>
-</template>
+</div>
+<div class="oneSection2login">
+    <div class="joqurPic" style="background-image:url('/joqur2.png')"></div>
+</div>
+
+</template> 
