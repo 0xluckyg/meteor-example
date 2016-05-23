@@ -10,8 +10,7 @@
 
     list-style-type: none;
     font-size: 13px;
-    background-color: white;
-    border: rgba(58, 28, 115, 0.4);
+    background-color: rgba(58, 28, 115, 1);
 }
 
 li .navTag {
@@ -20,7 +19,7 @@ li .navTag {
 
     padding: 18px 16px;
 
-    color: rgba(58, 28, 115, 1);
+    color: white;
     text-align: center;
     text-decoration: none;
 
@@ -30,7 +29,7 @@ li .navTag {
 
 /* Change the link color to #111 (black) on hover */
 li .navTag:hover {
-    background-color: rgba(240, 240, 240, 0.6);
+    background-color: rgba(240, 240, 240, 0.2);
 }
 
 .right {
@@ -45,9 +44,10 @@ li .navTag:hover {
     padding: 18px 16px;
     margin-left: 30px;
 
-    color: rgba(58, 28, 115, 1);
+    color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .signup {

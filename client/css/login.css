@@ -1,17 +1,14 @@
 
+/*First half of the page*/
+
 .oneSection1login {
     float: left;
+
     width: 50%;
 }
-
-.oneSection2login {
-    float: left;
-    width: 50%;
-    height: 100%;
-}
-
+ 
 .loginDiv {
-    margin: 40% 20%;
+    margin: 30% 20%;
 }
 
 @media screen and ( max-height: 420px ){
@@ -37,21 +34,24 @@
     width: 300px;
     height: 42px;
     margin: auto;
-    padding-left: 18px; padding-right: 18px;
+    padding-left: 18px; 
+    padding-right: 18px;
 
     background: transparent;
     border: 2px solid rgba(58, 28, 115, 1);
     border-radius: 21px;    
-    color: #F7F7Fa;
+    color: rgba(58, 28, 115, 1);
     font-size: 12px;
     outline: none;
 }
 
 .loginForm:hover, .loginForm:focus {
+    color: white;
     background: rgba(0,0,0,.3);
-    -webkit-transition: background .3s
     border: 2px solid rgba(58, 28, 115, 1);
+
     transition: background .3s;
+    -webkit-transition: background .3s
 }
 
 .loginButton {
@@ -80,8 +80,27 @@
 .buttonForm:hover {
     border: none;
     background: rgba(58, 28, 115, .6);
+    
     transition: 0.3s;
 }
+
+/*Second half of the page*/
+
+.oneSection2login {
+    float: left;
+
+    width: 50%;
+    height: 100%;
+}
+
+.joqurPic {
+    background-repeat: no-repeat;
+
+    margin-top: 3%;
+    padding-right: 28%;
+    height: 100%;
+}
+
 
 
 
