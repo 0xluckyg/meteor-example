@@ -1,8 +1,8 @@
 .imgsquare{
-    position: relative;
+    position: relative; 
     z-index: -1;
 
-    padding-top: 4.1%;
+    padding-top: 4%;
     height: 100%;
     z-index: 0;
 }
@@ -34,3 +34,34 @@
     transition: .3s;
     -webkit-transition: .3s;
 }
+
+/*After photo click*/
+
+.rankPhotoClickTemplate {
+    position: fixed;
+    z-index: 2;
+    overflow: scroll;
+
+    width: 55%;
+    height: 100%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+
+    background: white;
+    box-shadow: 2px 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.rankPhotoClick {
+    height: 70%;
+    width: 70%;
+    margin: 40px auto;
+
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
