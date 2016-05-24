@@ -1,24 +1,26 @@
 
-ul {
-    list-style-type: none;
+.navigationBar {
+    overflow: hidden;
+    z-index: 3;
+    position: fixed;
+
     margin: 0px;
     padding: 0;
-    font-size: 13px;
-    overflow: hidden;
-    background-color: white;
     width: 100%;
-    z-index: 1;
-}
 
-li {
-    float: left;
+    list-style-type: none;
+    font-size: 13px;
+    background-color: rgba(58, 28, 115, 1);
 }
 
 li .navTag {
+    float: left;
     display: block;
-    color: rgba(58, 28, 115, 1);
-    text-align: center;
+
     padding: 18px 16px;
+
+    color: white;
+    text-align: center;
     text-decoration: none;
 
     transition: background-color .3s, color .26s;
@@ -26,28 +28,26 @@ li .navTag {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: rgba(240, 240, 240, 0.1);
-    color: rgba(58, 28, 115, 0.4);
-}
-
-.navigationBar {
-    position: fixed;
+li .navTag:hover {
+    background-color: rgba(240, 240, 240, 0.2);
 }
 
 .right {
     float: right;
-
 }
 
 .brand {
     display: block;
-    color: rgba(58, 28, 115, 1);
+    float: left;
     text-align: center;
+
     padding: 18px 16px;
-    text-decoration: none;
     margin-left: 30px;
-    font-weight: 500;
+
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .signup {

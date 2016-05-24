@@ -1,0 +1,107 @@
+/*First half of the page*/
+
+.section1myPage {
+	float: left;
+
+	width: 50%;
+	height: 70%;
+}
+
+.profilePicture {
+	float: left;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100px;
+	height: 100px;
+	margin-top: 50%;
+	margin-left: 10%;
+
+	border-radius: 50%;
+}
+
+.profileInfo {
+	float: left;
+
+	margin-top: 50%;
+	margin-left: 30px;
+
+	color: rgba(58, 28, 115, 1);
+}
+
+.profileName {
+	margin-top: 10px;
+
+	font-weight: 500;
+}
+
+/*Second half of the page*/
+
+.section2myPage {
+	float: left;
+
+	width: 50%;
+	height: 70%;
+}
+
+.myPostScroll {
+	margin-top: 25%;
+	height: 100%;
+
+	overflow: scroll;
+
+}
+
+.myPost {
+	margin-top: 2%; 
+	margin-bottom: 13%; 
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 95%;
+
+	border-radius: 25px;
+}
+
+.myPostShade {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 25px;
+}
+
+.myPostShade:hover {
+	background-color: rgba(0,0,0,.3);
+
+	transition: 0.3s;
+}
+
+.myPostHeader {
+	position: absolute;
+
+	margin-top: 8%;
+	margin-left: 5%;
+
+	font-weight: 500;
+	color: rgba(58, 28, 115, 1);
+}
+
+.myPostComment {
+	float: right;
+
+	padding-top: 0px;
+	padding-right: 10px;
+
+	color: rgba(58, 28, 115, 1);
+}
+
+
+
+
+
+
+
+
+

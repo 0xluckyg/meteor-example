@@ -1,0 +1,28 @@
+<template name="photoClick"> 
+    
+    <div class="photoClickTemplate">
+        <div class="photoClick" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
+            <div class="clickShade"></div>
+            </div>
+        <ul class="commentUl">
+
+            {{#each comments}}
+            
+            <div class="commentProfilePicture" style="background-image:url('/superbad.png')"></div>
+
+            <div class="commentDiv">
+                <li class="commentName">{{name}}</li>
+                <li class="comment">{{text}}</li>
+                <p class="commentTimePosted">{{time}}</p>
+            </div>
+
+            <hr class="commentDivide">
+
+            {{/each}}
+
+            <div class="commentEmptySpace"></div>
+
+        </ul>
+    </div>
+
+</template>

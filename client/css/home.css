@@ -1,34 +1,51 @@
-.displayImage {
-    width: 500px;
-    height: 500px;
+.section1Home {
+    width: 50%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+}
+
+.homeImage {
+    z-index: -1;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    position: absolute;
-    z-index: -1;
+    width: 480px;
+    height: 480px;
+    margin: auto;
+
+    border-radius: 25px;
 }
 
-#photoShade {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 370px;
-    background: rgba(0,0,0,.6);
+.homeShade {
+    z-index: 0;
+
+    width: 480px;
+    height: 480px;
+    margin: auto;
+
+    border-radius: 25px;
+    background: rgba(0,0,0,.5);
 }
 
-.rating {
-    margin-top: 43%;
-    margin-left: 43%;
+.homeRating {
+    z-index: 1;
+
+    width: 40px;
+    margin: auto;
+    padding-top: 40%;
+
+    font-weight: 500;
     color: white;
-    font-size: 70px;
-    font-weight: 400;
-
+    font-size: 56px;
 }
 
-#point {
-    width: 500px;
-    margin-top: 600px;
-    margin-left: 370px;
+#homeRange {
+    display: block;
+
+    width: 480px;
+    margin: 50px auto;
 }

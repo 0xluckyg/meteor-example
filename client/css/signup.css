@@ -1,71 +1,89 @@
+/*First half of the page*/
 
-.signForm {
-    display: block;
-    background: transparent;
-    border: 2px solid rgba(270,270,270,0.7);
-    border-radius: 21px;
-    width: 300px;
-    height: 42px;
-    margin: 6px auto;
-    padding-left: 18px; padding-right: 18px;
-    box-sizing: border-box;
-    color: #F7F7Fa;
-    font-size: 12px;
-    outline: none;
-}
+.oneSection1signup {
+    float:left;
 
-.signForm:hover, .signForm:focus {
-    background: rgba(0,0,0,.3);
-    transition: background .3s;
-    -webkit-transition: background .3s
-    outline: none;
-    border: 2px solid rgba(270,270,270,1);
-
-    transition: all .3s;
-}
+    width: 50%;
+} 
 
 .signupDiv {
-    margin: 15% auto;
-    margin-top: calc(50vh - 210px);
-    margin-bottom: calc(48px);
-    width: 330px;
-    padding: 24px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 3px;
-    box-shadow: 0px 3px 12px -3px black;
-    border-radius: 15px;
+    margin: 30% 20%;
 }
+
 @media screen and ( max-height: 420px ){
     .signupDiv{
         margin-top: 48px;
     }
 }  
 
+
 #signupTag {
-    text-align: center;
-    font-size: 25px;
-    color: white;
     margin-bottom: 0px;
     margin-top: 9px;
+
+    text-align: center;
+    font-size: 25px;
+    color: rgba(58, 28, 115, 1);
+}
+
+.signForm {
+    display: block;
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 42px;
+    margin: auto;
+    padding-left: 18px; 
+    padding-right: 18px;
+
+    background: transparent;
+    border-radius: 21px;
+    border: 2px solid rgba(58, 28, 115, 1);
+    color: rgba(58, 28, 115, 1);
+    font-size: 12px;
+    outline: none;
+}
+
+.signForm:hover, .signForm:focus {
+    background: rgba(0,0,0,.3);
+    outline: none;
+
+    color: white;
+    transition: background .3s;
+    -webkit-transition: background .3s
 }
 
 #signupTag{
-    font-weight: normal;
     margin-bottom: 30px;
+
+    font-weight: normal;
 }
 
 #signUp {
+    margin-top: 20px;
+    width: 300px;
+
     border: none;
     background: rgba(58, 28, 115, 1);
-    margin-top: 25px;
     font-size: 15px;
+    color: white;
+    outline: none;
 }
 
 #signUp:hover {
+    margin-top: 20px;
+
     border: none;
     background: rgba(58, 28, 115, .6);
-    margin-top: 25px;
+    transition: 0.3s;
 }
 
+/*Second half of the page*/
 
+.oneSection2signup {
+    float: left;
+    
+    width: 50%;
+    height: 100%;
+}
 
