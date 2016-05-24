@@ -23,28 +23,19 @@
 
 	<div class="myPostScroll">
 
-		<div class="myPost" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
+		{{#each myImages}}
+
+		<div class="myPost" style="background-image:url({{image}})">
 			<div class="myPostShade"></div>
-			<p class="myPostComment">Comments: <span>45</span></p>
+			<p class="myPostComment">Comments: <span>{{commentNum}}</span></p>
 		</div>
 
-		<div class="myPost" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-			<div class="myPostShade"></div>
-			<p class="myPostComment">Comments: <span>90</span></p>
-		</div>
-
-		<div class="myPost" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-			<div class="myPostShade"></div>
-			<p class="myPostComment">Comments: <span>9000</span></p>
-		</div>
-
-		<div class="myPost" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-			<div class="myPostShade"></div>
-			<p class="myPostComment">Comments: <span>349</span></p>
-		</div>
+		{{/each}}
 
 	</div>
 	
 </div>
+
+{{ > photoClick }}
 
 </template>

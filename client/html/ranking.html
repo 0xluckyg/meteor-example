@@ -1,73 +1,22 @@
 <template name="ranking">
- 
-    {{> navbar }}
 
-        <div class="imgsquare"> 
+{{> navbar }}
 
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
+    <div class="imgsquare"> 
+
+        {{#each images}}
+
+        <div class="rankImage" style="background-image:url({{image}})">
+            <div class="rankShade">
             </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
-                <div class="rankShade">
-                </div>
-            </div>
-
-            <div class="rankPhotoClickTemplate">
-                <div class="rankPhotoClick" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')"></div>
-            </div>
-
         </div>
+
+        {{/each}}
+
+        <!-- After photo clicked -->
+
+    </div>
+
+{{ > photoClick}}
 
 </template>
