@@ -2,9 +2,10 @@
 
 .section1myPage {
 	float: left;
+	overflow: hidden;
 
 	width: 50%;
-	height: 70%;
+	height: 100vh;
 }
 
 .profilePicture {
@@ -41,9 +42,10 @@
 
 .section2myPage {
 	float: left;
+	overflow: hidden;
 
 	width: 50%;
-	height: 70%;
+	height: 100vh;
 }
 
 .myPostScroll {
@@ -55,12 +57,17 @@
 }
 
 .myPost {
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	margin-top: 2%; 
 	margin-bottom: 13%; 
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
-	height: 95%;
+	height: 70%;
 
 	border-radius: 25px;
 }
@@ -97,6 +104,12 @@
 	color: rgba(58, 28, 115, 1);
 }
 
+.myPostEmptySpace {
+	width: 100%;
+	height: 200px;
+
+	background: white;
+}
 
 
 

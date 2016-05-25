@@ -5,4 +5,9 @@ if (Meteor.isClient) {
             return;
         }
     });
+
+    Template.navbar.events({
+    	
+    });
+
 }

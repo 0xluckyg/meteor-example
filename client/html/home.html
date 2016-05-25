@@ -4,9 +4,14 @@
 
 <div class="section1Home">
     <div class="homeImage" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
+
+    {{#if homePhotoShade}}
     	<div class="homeShade">
-    		  <h1 class="homeRating">68</h1>
+
+    		  <h1 class="homeRating">{{sliderValueIs}}</h1>
+    		
     	</div>
+    {{/if}}
     </div>
 
     <input type="range" id="homeRange" name="point" min="0" max="100">

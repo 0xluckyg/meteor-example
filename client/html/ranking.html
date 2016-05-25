@@ -7,8 +7,12 @@
         {{#each images}}
 
         <div class="rankImage" style="background-image:url({{image}})">
-            <div class="rankShade">
-            </div>
+            {{#if rankingIsClicked}}
+
+            {{else}}
+                <div class="rankShade">
+                </div>
+            {{/if}}
         </div>
 
         {{/each}}
@@ -17,6 +21,10 @@
 
     </div>
 
-{{ > photoClick}}
+{{#if rankingIsClicked}}
+
+	{{ > photoClick}}
+
+{{/if}}
 
 </template>

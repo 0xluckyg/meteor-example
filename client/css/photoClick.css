@@ -19,6 +19,10 @@
 .photoClick {
     z-index: 3;
 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     height: 70%;
     width: 70%;
     margin-top: 110px;
@@ -49,12 +53,70 @@
     -webkit-transition: .3s
 }
 
+.commentButton {
+    float: right;
+
+    padding: 10px 18%;
+
+    text-align: center;
+    background: none;
+    border: none;
+    color: rgba(58, 28, 115, 1);
+    font-size: 15px;
+    outline: none;
+}
+
+.commentButton:active {
+    color: rgba(58, 28, 115, 0.4);
+}
 
 /*After comment button click*/
 
+.commentBox {
+    margin-right: 10%;
+    margin-top: 5%;
+    min-height: 10%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    color: rgba(58, 28, 115, 1);
+    font-size: 13px;
+    outline: none;
+}
+
+.commentSubmit {
+    float: right;
+
+    padding: 10px 13%;
+
+    text-align: center;
+    background: none;
+    border: none;
+    color: rgba(58, 28, 115, 1);
+    font-size: 15px;
+    outline: none;
+}
+
+.commentSubmit:active {
+    color: rgba(58, 28, 115, 0.4);
+}
+
+.commentSubmit:hover {
+
+    font-size: 18px;
+    transition: 0.3s;
+}
+
 .commentUl {
     display: inline-block;
-    width: 90%;
+    position: absolute;
+
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    padding: 0px;
 
 }
 
@@ -68,7 +130,7 @@
     width: 70px;
     height: 70px;
     margin-top: 20px;
-    margin-left: 7%;
+    margin-left: 4%;
 
     border-radius: 50%;
 }
@@ -76,7 +138,7 @@
 .commentDiv {
     float: left;
 
-    width: 70%;
+    width: 75%;
     margin-left: 30px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -108,7 +170,7 @@
 }
 
 .commentDivide {
-    width: 550px;
+    width: 100%;
 }
 
 .commentEmptySpace {

@@ -31,11 +31,17 @@
 		</div>
 
 		{{/each}}
+		
+		<div class="myPostEmptySpace"></div>
 
 	</div>
-	
+
 </div>
 
-{{ > photoClick }}
+{{#if myPostIsClicked}}
+
+	{{ > photoClick }}
+
+{{/if}}
 
 </template>

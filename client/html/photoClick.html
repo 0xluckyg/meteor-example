@@ -1,28 +1,37 @@
 <template name="photoClick"> 
     
     <div class="photoClickTemplate">
-        <div class="photoClick" style="background-image:url('http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg')">
+
+        <div class="photoClick" style="background-image:url('{{imageClicked}}')">
             <div class="clickShade"></div>
-            </div>
-        <ul class="commentUl">
+        </div>
 
-            {{#each comments}}
-            
-            <div class="commentProfilePicture" style="background-image:url('/superbad.png')"></div>
+        <button class="commentButton">Comments: <span>8</span></button>
 
-            <div class="commentDiv">
-                <li class="commentName">{{name}}</li>
-                <li class="comment">{{text}}</li>
-                <p class="commentTimePosted">{{time}}</p>
-            </div>
+        {{#if commentButtonClicked}}
+            <input class="commentBox" type="textarea" placeholder="Enter in a comment!">
+            <input class="commentSubmit" type="submit" value ="post">
 
-            <hr class="commentDivide">
+            <ul class="commentUl">
 
-            {{/each}}
+                {{#each comments}}
+                
+                <div class="commentProfilePicture" style="background-image:url('/superbad.png')"></div>
 
-            <div class="commentEmptySpace"></div>
+                <div class="commentDiv">
+                    <li class="commentName">{{name}}</li>
+                    <li class="comment">{{text}}</li>
+                    <p class="commentTimePosted">{{time}}</p>
+                </div>
 
-        </ul>
+                <hr class="commentDivide">
+
+                {{/each}}
+
+                <div class="commentEmptySpace"></div>
+
+            </ul>
+        {{/if}}
     </div>
 
 </template>
