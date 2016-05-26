@@ -7,7 +7,7 @@
     z-index: 2;
     overflow: scroll;
 
-    width: 55%;
+    width: 50%;
     height: 100vh;
     margin-left: 22.5%;
     margin-right: 22.5%;
@@ -23,21 +23,19 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    height: 70%;
-    width: 70%;
-    margin-top: 110px;
+    height: 80%;
+    width: 100%;
+    margin-top: 80px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
 
-    border-radius: 25px;
 }
 
 .clickShade {
     width: 100%;
     height: 100%;
 
-    border-radius: 25px;
 }
 
 .clickShade:hover {
@@ -47,7 +45,6 @@
     height: 100%;
 
     background: rgba(0,0,0,.5);
-    border-radius: 25px;
 
     transition: .3s;
     -webkit-transition: .3s
@@ -56,7 +53,7 @@
 .commentButton {
     float: right;
 
-    padding: 10px 18%;
+    padding: 10px 10%;
 
     text-align: center;
     background: none;
@@ -113,9 +110,9 @@
     position: absolute;
 
     margin-top: 4%;
-    margin-left: 10%;
+    margin-left: 0%;
     margin-right: 10%;
-    width: 80%;
+    width: 100%;
     padding: 0px;
 
 }
@@ -130,7 +127,7 @@
     width: 70px;
     height: 70px;
     margin-top: 20px;
-    margin-left: 4%;
+    margin-left: 8%;
 
     border-radius: 50%;
 }
@@ -138,7 +135,7 @@
 .commentDiv {
     float: left;
 
-    width: 75%;
+    width: 68%;
     margin-left: 30px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -171,6 +168,9 @@
 
 .commentDivide {
     width: 100%;
+
+    color: rgba(0,0,0,.1);
+    size: 0.1;
 }
 
 .commentEmptySpace {

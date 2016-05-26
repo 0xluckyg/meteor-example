@@ -1,4 +1,15 @@
 
+.navBarDiv {
+    position: fixed;
+    z-index: 3;
+
+    width: 100%;
+    height: 51px;
+    border-bottom: 2.5px solid rgba(58, 28, 115, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .navigationBar {
     overflow: hidden;
     z-index: 3;
@@ -10,7 +21,7 @@
 
     list-style-type: none;
     font-size: 13px;
-    background-color: rgba(58, 28, 115, 1);
+    background-color: white;
 }
 
 li .navTag {
@@ -19,7 +30,7 @@ li .navTag {
 
     padding: 18px 16px;
 
-    color: white;
+    color: rgba(58, 28, 115, 1);
     text-align: center;
     text-decoration: none;
 
@@ -29,7 +40,7 @@ li .navTag {
 
 /* Change the link color to #111 (black) on hover */
 li .navTag:hover {
-    background-color: rgba(240, 240, 240, 0.2);
+    background-color: rgba(200, 200, 200, 0.2);
 }
 
 .right {
@@ -44,7 +55,7 @@ li .navTag:hover {
     padding: 18px 16px;
     margin-left: 30px;
 
-    color: white;
+    color: rgba(58, 28, 115, 1);
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -55,7 +66,7 @@ li .navTag:hover {
 }
 
 .active {
-    background-color: rgba(240, 240, 240, 1);
+    background-color: rgba(200, 200, 200, 1);
 }
 
 
