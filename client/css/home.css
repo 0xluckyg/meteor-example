@@ -33,14 +33,16 @@
 
 .homeRating {
     z-index: 1;
+    text-align: center;
+    vertical-align: middle;
 
-    width: 40px;
     margin: auto;
     padding-top: 40%;
+    line-height: 60px;
 
-    font-weight: 500;
+    font-weight: 300;
     color: white;
-    font-size: 56px;
+    font-size: 80px;
 }
 
 #homeRange {

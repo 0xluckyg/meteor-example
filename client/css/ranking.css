@@ -27,8 +27,51 @@
     height: 100%;
 }
 
+.rankRatingDiv {
+    width: 35%;
+    margin: 30% auto;
+}
+
+.rankRating {
+    z-index: 2;
+    text-align: center;
+    vertical-align: middle;
+
+    width: 100%;
+    margin: 5px auto;
+    line-height: 60px;
+
+
+    color: transparent;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.rankNumRating{
+    text-align: center;
+    vertical-align: middle;
+
+    width: 100%;
+    margin: auto;
+
+    color: transparent;
+    font-size: 13px;
+}
+
 .rankShade:hover{
     background: rgba(0,0,0,.5);
     transition: .3s;
     -webkit-transition: .3s;
+}
+
+.rankShade:hover .rankRating {
+    color: white;
+
+    transition: 0.3s;
+}
+
+.rankShade:hover .rankNumRating {
+    color: white;
+
+    transition: 0.3s;
 }

@@ -42,6 +42,7 @@ Template.ranking.events({
 	    if (Session.get('rankingIsClicked') == false) {
 	    	Session.set('rankingIsClicked', true);
 	    	Session.set('imageClicked', this.image);
+	    	// Ssession.set('ratingClicked', )
 	    } else {
 	      	Session.set('rankingIsClicked', false);
 			Session.set('commentButtonClicked', false);
