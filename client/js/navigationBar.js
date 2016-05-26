@@ -1,13 +1,8 @@
 if (Meteor.isClient) {
 
     Template.navbar.helpers({
-        listOfItems: function () {
-            return;
+        currentPage: function () {
+            return Session.get('currentPage');
         }
     });
-
-    Template.navbar.events({
-    	
-    });
-
 }

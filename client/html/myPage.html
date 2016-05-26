@@ -3,19 +3,44 @@
 
 {{ > navbar }}
 
+<div class="sectionTopMyPage">
+<div class="profilePicture" style="background-image:url('/superbad.png')"></div>
+<div class="profileInfo">
+	<h2 class="profileName">McLovin</h2>
+	<p>
+		<span>21</span>
+		 Posts / 
+		<span>1634</span>
+		 Ratings / 
+		<span>68</span>
+		 Average / 
+	</p>
+</div>
+</div>
+
 <div class="section1myPage">
-	<div class="profilePicture" style="background-image:url('/superbad.png')"></div>
-	<div class="profileInfo">
-		<h2 class="profileName">McLovin</h2>
-		<p>
-			<span>21</span>
-			 Posts / 
-			<span>1634</span>
-			 Ratings / 
-			<span>68</span>
-			 Average / 
-		</p>
+
+	<h1 class="myPostHeader">Recents</h1>
+
+	<div class="myPostScroll">
+
+		{{#each myRecents}}
+
+		<div class="myPost" style="background-image:url({{image}})">
+			<div class="myPostShade">
+				<h1 class="myPostRecentRating">{{rating}}</h1>
+				<hr class="myPostProgress">
+			</div>
+
+		</div>
+
+		{{/each}}
+		
+		<div class="myPostEmptySpace"></div>
+
 	</div>
+
+
 </div>
 
 <div class="section2myPage">

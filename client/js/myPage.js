@@ -4,6 +4,14 @@ if (Meteor.isClient) {
 
     Template.myPage.helpers({
 
+        myRecents: [
+            {rating: 23.2, numberOfRates: 23,image: "http://www.wallcoo.net/photography/hip_hop_styles/images/%5Bwallcoo_com%5D_hi_hop_styles_25394710.jpg"},
+            {rating: 23.2, numberOfRates: 23,image: "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg"},
+            {rating: 23.2, numberOfRates: 23,image: "http://img.autobytel.com/car-reviews/autobytel/11694-good-looking-sports-cars/2016-Ford-Mustang-GT-burnout-red-tire-smoke.jpg"},
+            {rating: 23.2, numberOfRates: 23,image: "https://imgflip.com/s/meme/One-Does-Not-Simply.jpg"},
+            {rating: 23.2, numberOfRates: 23,image: "https://i.ytimg.com/vi/TYqev6jpM6s/hqdefault.jpg"}
+        ],
+
         myImages: [
 
             { image: 'http://i.imgur.com/qK42fUu.jpg', commentNum: 2453 },
@@ -23,9 +31,24 @@ if (Meteor.isClient) {
         //Refers to photoClick.js
         myPostIsClicked: function() {
             return Session.get('myPostIsClicked');
+        },
+
+        myRecentPostHover: function() {
+            return Session.get('myRecentPostHover');
         }
 
 
+    });
+
+    Template.myPage.events({
+        'mouseenter .myPostShade': function(){
+            Session.set('myRecentPostHover', true);
+            console.log('wef');
+        },
+
+        'mouseleave .myPostShade': function(){
+            Session.set('myRecentPostHover', false);
+        }
     });
 
 }
