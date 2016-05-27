@@ -13,8 +13,15 @@ if (Meteor.isClient) {
 			
 		homePhotoShade: function(){
 			return Session.get('homePhotoShade');
-		}
+		},
 
+		loginTemplate: function() {
+            return Session.get('loginTemplate');
+        },
+
+        signupTemplate: function() {
+            return Session.get('signupTemplate');
+        }
 
 	});
 

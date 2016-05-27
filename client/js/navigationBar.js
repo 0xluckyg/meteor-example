@@ -5,4 +5,5 @@ if (Meteor.isClient) {
             return Session.get('currentPage');
         }
     });
+
 }

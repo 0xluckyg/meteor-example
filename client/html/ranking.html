@@ -26,9 +26,15 @@
     </div>
 
 {{#if rankingIsClicked}}
-
 	{{ > photoClick}}
+{{/if}}
 
+{{#if loginTemplate}}
+    {{ > account}}
+{{/if}}
+
+{{#if signupTemplate}}
+    {{ > account}}
 {{/if}}
 
 </template>

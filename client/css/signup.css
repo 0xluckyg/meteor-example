@@ -1,23 +1,112 @@
-/*First half of the page*/
 
-.oneSection1signup {
-    float:left;
+/*Login*/
 
-    width: 50%;
-} 
+.loginPopupDiv {
+    position: fixed;
+    z-index: 4;
+    top: 0;
 
-.signupDiv {
-    margin: 30% 20%;
+    height: 290px;
+    width: 33.3%;
+    padding-top: 3%;
+    margin-top: 15%;
+    margin-left: 33.3%;
+    margin-right: 33.3%;
+
+    background: white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and ( max-height: 420px ){
-    .signupDiv{
-        margin-top: 48px;
-    }
-}  
+#loginPopupTag {
+    margin-bottom: 30px;
+    margin-top: 9px;
+    text-align: center;
 
+    font-size: 25px;
+    color: rgba(58, 28, 115, 1);
+    font-weight: normal;
+}
 
-#signupTag {
+.loginPopupForm {
+    display: block;
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 42px;
+    margin: auto;
+    padding-left: 18px; 
+    padding-right: 18px;
+
+    background: transparent;
+    border: 2px solid rgba(58, 28, 115, 1);
+    border-radius: 21px;    
+    color: rgba(58, 28, 115, 1);
+    font-size: 12px;
+    outline: none;
+}
+
+.loginPopupForm:hover, .loginPopupForm:focus {
+    color: white;
+    background: rgba(0,0,0,.3);
+    border: 2px solid rgba(58, 28, 115, 1);
+
+    transition: background .3s;
+    -webkit-transition: background .3s
+}
+
+.loginPopupButton {
+    width: 300px;
+    margin: auto;
+}
+
+.buttonPopupForm {
+    margin-top: 21px;
+    display: inline;
+    box-sizing: border-box;
+
+    width: 145px;
+
+    border: none;
+    background: rgba(58, 28, 115, 1);
+    font-size: 15px;
+    border-radius: 21px;
+    height: 42px;
+    color: #F7F7Fa;
+    outline: none;
+}
+
+.buttonPopupForm:nth-child(2) {
+    float: right;
+}
+
+.buttonPopupForm:hover {
+    border: none;
+    background: rgba(58, 28, 115, .6);
+    
+    transition: 0.3s;
+}
+
+/*signup*/
+
+.signupPopupDiv {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+
+    height: 355px;
+    width: 33.3%;
+    padding-top: 3%;
+    margin-top: 15%;
+    margin-left: 33.3%;
+    margin-right: 33.3%;
+
+    background: white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#signupPopupTag {
     margin-bottom: 0px;
     margin-top: 9px;
 
@@ -26,7 +115,7 @@
     color: rgba(58, 28, 115, 1);
 }
 
-.signForm {
+.signPopupForm {
     display: block;
     box-sizing: border-box;
 
@@ -44,7 +133,7 @@
     outline: none;
 }
 
-.signForm:hover, .signForm:focus {
+.signPopupForm:hover, .signPopupForm:focus {
     background: rgba(0,0,0,.3);
     outline: none;
 
@@ -53,37 +142,16 @@
     -webkit-transition: background .3s
 }
 
-#signupTag{
+.signupPopupButton {
+    width: 300px;
+    margin: auto;
+}
+
+#signupPopupTag{
     margin-bottom: 30px;
 
     font-weight: normal;
 }
 
-#signUp {
-    margin-top: 20px;
-    width: 300px;
 
-    border: none;
-    background: rgba(58, 28, 115, 1);
-    font-size: 15px;
-    color: white;
-    outline: none;
-}
-
-#signUp:hover {
-    margin-top: 20px;
-
-    border: none;
-    background: rgba(58, 28, 115, .6);
-    transition: 0.3s;
-}
-
-/*Second half of the page*/
-
-.oneSection2signup {
-    float: left;
-    
-    width: 50%;
-    height: 100%;
-}
 

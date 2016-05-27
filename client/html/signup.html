@@ -1,19 +1,30 @@
-<template name="signup">
+<template name="account">
+    
+{{#if isLogin}}
 
-{{> navbar }}
-
-<div class="oneSection1signup">
-    <div class="signupDiv">
-        <h2 id="signupTag">Sign Up &ndash; it's free!</h2>
-        <input class="signForm" type=text placeholder="Email"> <br>
-        <input class="signForm" type=text placeholder="Username"> <br>
-        <input class="signForm" type=password placeholder="Password">
-        <input class="signForm" id="signUp" type=button value="SIGN UP">
+    <div class="loginPopupDiv">
+        <h2 id="loginPopupTag">First, lets log in!</h2>
+        <input class="loginPopupForm" type=text placeholder="Username"> <br>
+        <input class="loginPopupForm" type=password placeholder="Password">
+        <div class="loginPopupButton">
+            <input class="buttonPopupForm" type=button value="LOGIN">
+            <input class="buttonPopupForm goToSignup" type=button value="SIGN UP">
+        </div>    
     </div>
-</div>
 
-<div class="oneSection2signup">
-    <div class="joqurPic" style="background-image:url('/joqur2.png')"></div>
-</div>
+{{else}}
 
-</template>  
+    <div class="signupPopupDiv">
+        <h2 id="signupPopupTag">Sign Up &ndash; it's free!</h2>
+        <input class="signPopupForm" type=text placeholder="Email"> <br>
+        <input class="signPopupForm" type=text placeholder="Username"> <br>
+        <input class="signPopupForm" type=password placeholder="Password">
+        <div class="signupPopupButton">
+            <input class="buttonPopupForm" type=button value="SIGN UP">
+            <input class="buttonPopupForm goToLogin" type=button value="LOGIN">
+        </div>
+    </div>
+    
+{{/if}}
+
+</template>

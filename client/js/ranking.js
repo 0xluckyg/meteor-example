@@ -23,6 +23,15 @@ if (Meteor.isClient) {
         // Refers to photoClick.js
         rankingIsClicked: function() {
           return Session.get('rankingIsClicked');
+        },
+
+        // Refers to login and signup events in navigationBar.js 
+        loginTemplate: function() {
+            return Session.get('loginTemplate');
+        },
+
+        signupTemplate: function() {
+            return Session.get('signupTemplate');
         }
 
     });
