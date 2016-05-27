@@ -14,6 +14,14 @@ Template.photoClick.helpers({
 		return Session.get('commentButtonClicked');
 	},
 
+	clickedImageRating:	function() {
+		return Session.get('clickedImageRating');
+	},
+
+	clickedImageNumRating: function() {
+		return Session.get('clickedImageNumRating');
+	},
+
 	comments: [
 	    { text: 'This is comment 1 This is comment 1 This is comment 1 This is comment 1 This is comment 1 ', name: 'Scott', time: '10/20/2015'},
 	    { text: 'This is comment 2 This is comment 2 This is comment 2 This is comment 2', name: 'Gilfoyle', time: '10/20/2015'},
@@ -42,7 +50,7 @@ Template.ranking.events({
 	    if (Session.get('rankingIsClicked') == false) {
 	    	Session.set('rankingIsClicked', true);
 	    	Session.set('imageClicked', this.image);
-	    	// Ssession.set('ratingClicked', )
+
 	    } else {
 	      	Session.set('rankingIsClicked', false);
 			Session.set('commentButtonClicked', false);
@@ -52,7 +60,15 @@ Template.ranking.events({
   	'click .navTag':function() {
 	    Session.set('rankingIsClicked', false);
 		Session.set('commentButtonClicked', false);
+  	},
+
+  	'click .rankShade':function(event) {
+  		var rating = $(event.currentTarget).children().children('.rankRating').text();
+  		var numRating = $(event.currentTarget).children().children('.rankNumRating').text();
+  		Session.set('clickedImageRating', rating);
+  		Session.set('clickedImageNumRating', numRating);
   	}
+
 });
 
 Template.myPage.events({
@@ -70,6 +86,13 @@ Template.myPage.events({
   	'click .navTag':function() {
     	Session.set('myPostIsClicked', false);
 		Session.set('commentButtonClicked', false);
+  	},
+
+  	'click .section2myPage .myPostShade':function(event) {
+  		var rating = $(event.currentTarget).children('.myPostRecentRating').text();
+  		var numRating = $(event.currentTarget).children('.myPostNumRating').text();
+  		Session.set('clickedImageRating', rating);
+  		Session.set('clickedImageNumRating', numRating);
   	}
 
 });
