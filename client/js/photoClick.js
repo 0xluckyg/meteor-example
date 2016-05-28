@@ -41,7 +41,9 @@ Template.photoClick.events({
 		} else {
 			Session.set('commentButtonClicked', false);
 		}
-	}
+
+	},
+
 });
 
 Template.ranking.events({

@@ -6,10 +6,10 @@ if (Meteor.isClient) {
         }
     });
 
- //    Template.navbar.events({
- //     		'click .navTagLi': function(e) {
- //            $(e.currentTarget).addClass('active')
-	// 	}
-	// });
+    Template.navbar.events({
+     	'click .navTagLi': function(event) {
+        	var currentPage = $(event.currentTarget);
+		}
+	});
 
 }

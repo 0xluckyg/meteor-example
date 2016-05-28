@@ -30,7 +30,7 @@ if (Meteor.isClient) {
 	     var sliderValue = event.currentTarget.value;
 	     Session.set('sliderValueIs', sliderValue);
 	     Session.set('homePhotoShade', true);
-	  }
+		}
 	});
 
 }

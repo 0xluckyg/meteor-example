@@ -47,9 +47,82 @@
     font-size: 80px;
 }
 
+/*input range*/
+
 #homeRange {
     display: block;
 
     width: 480px;
     margin: 50px auto;
 }
+
+#homeRange{
+    -webkit-appearance: none;
+}
+
+#homeRange::-webkit-slider-runnable-track {
+    height: 12px;
+    background: white;
+    border-top: 2px solid rgba(58, 28, 115, 1);
+}
+
+#homeRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid rgba(58, 28, 115, 1);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: transparent;
+    margin-top: -9px;
+}
+
+#homeRange:focus {
+    outline: none;
+}
+
+/*input range for Firefox*/
+
+#homeRange::-moz-range-track {
+    height: 2px;
+    background: rgba(58, 28, 115, 1);
+    border: none;
+    border-radius: 3px;
+}
+
+#homeRange::-moz-range-thumb {
+    border: 2px solid rgba(58, 28, 115, 1);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+/*hide the outline behind the border*/
+#homeRange:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -7px;
+}
+
+#homeRange:focus::-moz-range-track {
+    background: rgba(58, 28, 115, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

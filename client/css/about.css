@@ -1,0 +1,259 @@
+.backButton {
+	position: fixed;
+
+	width: 70px;
+	height: 70px;
+	margin-top: 20px;
+	margin-left: 93%;
+	margin-right: 20px;
+
+	background: rgba(0,0,0,.3);
+	border-radius: 50%;
+}
+
+.backLink {
+	float: left;
+
+	width: 20px;
+	margin: 25px 12px;
+
+	color: white;
+	text-decoration: none;
+
+	font-size: 17px;
+}
+
+.oneSection1About {
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 100%;
+	height: 740px;
+}
+
+.joqurName {
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 100px;
+    color: rgba(58, 28, 115, 1);
+    width: 100%;
+    margin: 20% auto;
+}
+
+.oneDividerAbout {
+	height: 200px;
+
+	background: rgba(58, 28, 115, 1);
+}
+
+.oneDividerAboutText {
+	text-align: center;
+    vertical-align: middle;
+
+    width: 100%;
+    padding-top: 5%;
+    margin: auto;
+
+    color: white;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.twoSection1About {
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 100%;
+	height: 730px;
+}
+
+.twoSection1AboutDiv {
+	position: relative;
+
+	width: 70%;
+	height: 30%;
+	margin: 20% auto;
+
+	background: rgba(58, 28, 115, 1);
+}
+
+.twoSection1AboutDivText {
+	text-align: center;
+    vertical-align: middle;
+
+    width: 80%;
+    padding-top: 9%;
+    margin: auto;
+
+    color: white;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.threeSection1About {
+	width: 100%;
+	height:740px;
+}
+
+.threeSection1AboutText {
+	text-align: center;
+    vertical-align: middle;
+
+    width: 80%;
+    padding-top: 23%;
+    margin: auto;
+
+    color: rgba(58, 28, 115, 1);
+    font-weight: 300;
+    font-size: 100px;
+}
+
+.fourSection1About {
+	overflow: hidden;
+
+	width: 100%;
+	height: 700px;
+
+	background: rgba(255, 216, 41, 1);
+
+}
+
+.fourSection1AboutDiv {
+	float: left;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 50%;
+	height: 700px;
+
+}
+
+.fourSection1AboutDivText1 {
+	display: block;
+
+	padding: 30px;
+	margin-left: 53%;
+
+	font-size: 40px;
+	color: white;
+	font-weight: 200;
+}
+
+.fourSection1AboutDivText2 {
+	display: block;
+
+	padding: 30px;
+	margin-left: 53%;
+	margin-top: 10%;
+
+	font-size: 90px;
+	color: white;
+	font-weight: 700;
+}
+
+.fiveSection1About {
+	overflow: hidden;
+	display: block;
+
+	width: 100%;
+	height: 740px;
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.fiveSection1AboutDivText1 {
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 90px;
+	color: white;
+	font-weight: 700;
+	width: 100%;
+    margin: 23% auto;
+}
+
+.sixSection1About {
+	overflow: hidden;
+
+	width: 100%;
+	height: 700px;
+
+	background: rgba(27, 196, 81, 1);
+}
+
+.sixSeciontAbout1Div {
+	float: right;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 50%;
+	height: 700px;
+}
+
+.sixSection1AboutDivText1 {
+	display: block;
+
+	padding: 30px;
+	margin-left: 27%;
+
+	font-size: 40px;
+	color: white;
+	font-weight: 200;
+}
+
+.sixSection1AboutDivText2 {
+	display: block;
+
+	padding: 30px;
+	margin-left: 7%;
+	margin-top: 10%;
+
+	font-size: 90px;
+	color: white;
+	font-weight: 700;
+}
+
+
+.footerAbout {
+	width: 100%;
+	height: 280px;
+}
+
+.footerAboutDiv1 {
+	float: left;
+	width: 33.33%;
+	height: 100%;
+
+	background: yellow;
+}
+
+.footerAboutDiv2 {
+	float: left;
+	width: 33.33%;
+	height: 100%;
+
+	background: blue;	
+}
+
+.footerAboutDiv3 {
+	float: left;
+	width: 33.33%;
+	height: 100%;
+
+	background: red
+}
+
+
