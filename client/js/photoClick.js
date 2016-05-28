@@ -12,10 +12,9 @@ Template.photoClick.helpers({
 	
 	commentButtonClicked: function() {
 		if(Session.get('commentButtonClicked')) {
-			setTimeout(function() {
-				$('.photoClickTemplate').animate({scrollTop: $('.photoClick')[0].offsetHeight + 108});
-			}, 600);
+
 			return true;
+
 		}
 		else return;
 	},
@@ -44,8 +43,16 @@ Template.photoClick.events({
 	'click .commentButton':function() {
 		if (Session.get('commentButtonClicked') == false) {
 			Session.set('commentButtonClicked', true);
+			setTimeout(function() {
+				$('.photoClickTemplate').animate({scrollTop: $('.photoClick')[0].offsetHeight + 108});
+			}, 10);
 		} else {
-			Session.set('commentButtonClicked', false);
+			setTimeout(function() {
+				$('.photoClickTemplate').animate({scrollTop: 0});
+			}, 10);
+			setTimeout(function() {
+				Session.set('commentButtonClicked', false);
+			}, 500);
 		}
 
 	},

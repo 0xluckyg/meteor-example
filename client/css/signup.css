@@ -47,12 +47,11 @@
 }
 
 .loginPopupForm:hover, .loginPopupForm:focus {
-    color: white;
-    background: rgba(0,0,0,.3);
-    border: 2px solid rgba(58, 28, 115, 1);
+    color: rgba(58, 28, 115, 0.6);
+    border: 2px solid rgba(58, 28, 115, 0.6);
 
-    transition: background .3s;
-    -webkit-transition: background .3s
+    transition: .3s;
+    -webkit-transition: .3s
 }
 
 .loginPopupButton {
@@ -134,12 +133,12 @@
 }
 
 .signPopupForm:hover, .signPopupForm:focus {
-    background: rgba(0,0,0,.3);
     outline: none;
 
-    color: white;
-    transition: background .3s;
-    -webkit-transition: background .3s
+    border: 2px solid rgba(58, 28, 115, 0.6);
+    color: rgba(58, 28, 115, 0.6);
+    transition: .3s;
+    -webkit-transition: .3s
 }
 
 .signupPopupButton {
