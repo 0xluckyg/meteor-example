@@ -157,8 +157,29 @@
     background: rgba(58, 28, 115, 1);
 }
 
+.postButton {
+    margin-top: 15%;
+    margin-left: 60%;
+    display: inline;
+    box-sizing: border-box;
 
+    width: 145px;
 
+    border: none;
+    background: rgba(58, 28, 115, 1);
+    font-size: 15px;
+    border-radius: 21px;
+    height: 42px;
+    color: #F7F7Fa;
+    outline: none;
+}
+
+.postButton:hover {
+    border: none;
+    background: rgba(58, 28, 115, .6);
+    
+    transition: 0.3s;
+}
 
 
 
