@@ -11,7 +11,13 @@ Template.photoClick.helpers({
 	},
 	
 	commentButtonClicked: function() {
-		return Session.get('commentButtonClicked');
+		if(Session.get('commentButtonClicked')) {
+			setTimeout(function() {
+				$('.photoClickTemplate').animate({scrollTop: $('.photoClick')[0].offsetHeight + 108});
+			}, 600);
+			return true;
+		}
+		else return;
 	},
 
 	clickedImageRating:	function() {
