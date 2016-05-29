@@ -6,6 +6,7 @@ if (Meteor.isClient) {
         }
     });
 
+    //Incomplete
     Template.navbar.events({
      	'click .navTagLi': function(event) {
         	var currentPage = $(event.currentTarget);
