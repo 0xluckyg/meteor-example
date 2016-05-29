@@ -113,17 +113,17 @@
 .postRange::-webkit-slider-runnable-track {
     height: 12px;
     background: white;
-    border-top: 2px solid rgba(58, 28, 115, 1);
+    border-top: 3px solid rgba(58, 28, 115, 1);
 }
 
 .postRange::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: 2px solid rgba(58, 28, 115, 1);
-    height: 16px;
-    width: 16px;
+    border: 3px solid rgba(58, 28, 115, 1);
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     background: transparent;
-    margin-top: -9px;
+    margin-top: -16px;
 }
 
 .postRange:focus {
@@ -140,9 +140,9 @@
 }
 
 .postRange::-moz-range-thumb {
-    border: 2px solid rgba(58, 28, 115, 1);
-    height: 16px;
-    width: 16px;
+    border: 3px solid rgba(58, 28, 115, 1);
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     background: transparent;
 }
@@ -150,7 +150,7 @@
 /*hide the outline behind the border*/
 .postRange:-moz-focusring{
     outline: 1px solid white;
-    outline-offset: -7px;
+    outline-offset: -16px;
 }
 
 .postRange:focus::-moz-range-track {
