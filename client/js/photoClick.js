@@ -4,6 +4,10 @@ import '../html/myPage.html';
 
 if (Meteor.isClient) {
 
+Template.photoClick.rendered = function () {
+	$('.photoClickTemplate').stopOverscroll();
+};
+
 Template.photoClick.helpers({
 
 	imageClicked: function() {
