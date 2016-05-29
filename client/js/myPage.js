@@ -4,6 +4,7 @@ if (Meteor.isClient) {
 
     Template.myPage.helpers({
 
+        //Data for My Recent section and My Posts section
         myRecents: [
             {rating: 23.2, numberOfRates: 23,image: "https://media.gq.com/photos/566f53b622c04e90668117ae/master/pass/Swerves-of-2015-drake-hotline-bling.jpg"},
             {rating: 27.2, numberOfRates: 23,image: "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg"},
@@ -11,6 +12,7 @@ if (Meteor.isClient) {
             {rating: 66.6, numberOfRates: 23,image: "https://imgflip.com/s/meme/One-Does-Not-Simply.jpg"},
             {rating: 99.2, numberOfRates: 23,image: "https://i.ytimg.com/vi/TYqev6jpM6s/hqdefault.jpg"}
         ],
+
 
         myImages: [
 
@@ -28,7 +30,7 @@ if (Meteor.isClient) {
             {commentNum: 234, numRating: 10, rating: 67.2, image: 'https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1450&h=825&fit=crop&s=bfda9916c885869b43b70738693428d9', }
         ],
 
-        //Refers to photoClick.js
+        //Refers to photoClick.js (Whether to show photoClick template or not)
         myPostIsClicked: function() {
             return Session.get('myPostIsClicked');
         },
