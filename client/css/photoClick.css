@@ -1,15 +1,31 @@
 /*After photo click*/
 
-.photoClickTemplate {
+.photoClickTemplateTransparent {
     top:0;
     position: fixed;
     z-index: 2;
     overflow: scroll;
 
+    width: 55%;
+    height: 100vh;
+    margin-left: 20%;
+    margin-right: 25%;
+
+    background: transparent;
+}
+
+.photoClickTemplate {
+    top:0;
+    position: fixed;
+    z-index: 2;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
     width: 50%;
     height: 100vh;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 5%;
+    
 
     background: white;
     box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.3);
@@ -153,6 +169,76 @@
     -webkit-transition: 0.3s;
 }
 
+/*Share buttons*/
+.shareButtonsDiv {
+    float: right;
+    position: fixed;
+    z-index: 9; 
+
+    top: 10%;
+    padding-right: 100;
+    margin-right: 10%;
+    width: 5%;
+    height: 400;
+
+    background-color: rgb(255,255,255,0.4);
+}
+
+.shareButton {
+    display: block;
+    position: relative;
+    z-index: 10;
+
+    margin-top: 25%;    
+    margin-bottom: 25%;    
+    margin-right: 20%;   
+    margin-left: 0;  
+    width: 50px;
+    height: 50px;
+    padding-right: 20;    
+
+    background: red;
+    border-radius: 20%;
+}
+
+.shareButton:hover {
+    opacity: 0.8;
+
+    transition: 0.3s;
+}
+
+.fa-facebook, .fa-instagram, .fa-twitter, .fa-pinterest-p {
+    position: relative;    
+    display: inline-block;
+
+    margin-left: 20%;
+    margin-top: 15%;
+    
+
+    vertical-align: center;    
+
+    color: white;
+    font-size: 35px;    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.facebookShare {
+    background: rgb(59, 89, 152);
+}
+
+.instagramShare {
+    background: rgb(18, 86, 136);
+}
+
+.twitterShare {
+    background: rgb(85, 172, 238);
+}
+
+.pinterestShare {
+    background: rgb(203, 32, 39);
+}
+
 /*input rangebar*/
 
 #photoClickRange {
@@ -162,7 +248,7 @@
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    margin-top: 87%;
+    margin-top: 80%;
     -webkit-appearance: none;
 
 }
@@ -383,7 +469,8 @@
 }
 
 .commentDivide {
-    width: 100%;
+    float: right;
+    width: 93%;    
 
     color: rgba(0,0,0,.1);
     size: 0.1;

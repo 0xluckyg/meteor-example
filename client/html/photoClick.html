@@ -1,8 +1,22 @@
-<template name="photoClick"> 
-    
-    <div class="photoClickTemplate">
+<template name="photoClick">         
+
+<div class="photoClickTemplateTransparent">
+
+    <div class="shareButtonsDiv">
+        <a class="shareButton facebookShare" href="F"><i class="fa fa-facebook" aria-hidden="true"></i>
+</a>
+        <a class="shareButton instagramShare" href="I"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+        <a class="shareButton twitterShare" href="T"><i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+        <a class="shareButton pinterestShare" href="P"><i class="fa fa-pinterest-p" aria-hidden="true"></i>
+</a>
+    </div>
+
+    <div class="photoClickTemplate">        
 
         <div class="photoClick" style="background-image:url('{{imageClicked}}')">
+
             <div class="clickShade">
                 <div class="commentPhotoProfilePicture" style="background-image:url('https://c.stocksy.com/a/8cE000/z0/56180.jpg')">
                 </div>
@@ -43,6 +57,6 @@
         {{/if}}
 
     </div>
-
+</div>
 
 </template>
