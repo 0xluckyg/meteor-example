@@ -4,13 +4,14 @@
 
 	<div class="section1Post">
 		<div class="postDiv">
+			<p class="photoPostDescription">By uploading a photo on Joqur, you agree that it <a>will be seen and rated by other users. </a>You'll be able to decide whether the photo goes to public or not</p>
 			<input class="postUrl" type=text placeholder="Enter photo URL">
 			<h2 class="postOr">OR</h2>
 			<input class="postUpload" type=button value="UPLOAD">
 		</div>
 	</div>
 
-	<div class="section2Post">
+<!-- 	<div class="section2Post">
 		<div class="postOptionDiv">
 			<h2 class="postTextHowMany"><span class="howManyNumber">{{howManyNumberValue}} </span>people can rate this post </h2>
 			<form>
@@ -19,6 +20,45 @@
 			</form>
 		</div>
 		<button class="postButton">POST</button>
-	</div>
+	</div> -->
+
+	{{ > postPhoto }}
+
+	{{#if photoUploaded}}
+
+		{{ > postPhoto }}
+
+	{{/if}}
 
 </template> 
+
+<template name="postPhoto">
+
+ 	<div class="postPhotoDiv">        
+        <div class="postPhotoImage" style="background-image:url('/superbad.png')">
+            <div class="postPhotoShade">
+            	<div class="postInformation">
+	            	<input class="postTags" type=text placeholder="PLEASE ENTER RELEVANT TAGS">
+	            	<p class="postGoPublicAfterRating">CAN YOUR PHOTO BE SHOWN TO THE PUBLIC AFTER BEING RATED? <br><a class="publicYes">YES / </a><a class="publicNo">NO</a> </p>
+	            	<p class="postNumberOfRatingsAllowed"></p>            	
+	            	<p class="postTextHowMany"><span class="howManyNumber">{{howManyNumberValue}} </span>PEOPLE CAN RATE THIS POST </p>
+	            	<form>
+						<input type="range" id="postPhotoRatingRange" name="point" min="10" max="100">
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+
+</template>
+
+
+
+
+
+
+
+
+
+
+
